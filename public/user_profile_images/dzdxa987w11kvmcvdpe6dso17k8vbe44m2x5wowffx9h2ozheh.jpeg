@@ -1,0 +1,43 @@
+========================================================================	
+URI: /api/v1/orders/store
+HTTP VERB(METHOD):POST
+	Create/Place a new order. The JSON payload will be like shown below:
+
+
+THE UPDATED STORE ORDER 
+
+
+{
+
+	"order":
+	{		
+		"venue_id": "15",
+		"court_id": "5",
+		"spl_instructions": "Do not use MSG",
+		"user_id": "6"   <---------------------------This is where you pass in the user_id who is ordering this food items.
+	},
+	
+	"order_items":
+	[
+		{
+			"stall_food_item_id":"1",
+			"unit_price":"10.7",
+			"quantity": "2",
+			"stall_id":"6"
+			},
+			
+			{
+			"stall_food_item_id":"2",
+			"unit_price":"20.2",
+			"quantity": "4",
+			"stall_id":"6"
+			},
+					{
+			"stall_food_item_id":"5",
+			"unit_price":"1.4",
+			"quantity": "10",
+			"stall_id":"6"
+			}
+	]
+	
+}

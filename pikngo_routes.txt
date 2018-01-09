@@ -1,0 +1,42 @@
++--------+----------+-----------------------------------------------------+------+----------------------------------------------------------+--------------+
+| Domain | Method   | URI                                                 | Name | Action                                                   | Middleware   |
++--------+----------+-----------------------------------------------------+------+----------------------------------------------------------+--------------+
+|        | GET|HEAD | /                                                   |      | Closure                                                  | web          |
+|        | GET|HEAD | api/user                                            |      | Closure                                                  | api,auth:api |
+|        | POST     | api/v1/address/store                                |      | App\Http\Controllers\AddressController@store             | web          |
+|        | GET|HEAD | api/v1/address/{id?}                                |      | App\Http\Controllers\AddressController@index             | web          |
+|        | POST     | api/v1/address/{id}/delete                          |      | App\Http\Controllers\AddressController@destroy           | web          |
+|        | POST     | api/v1/address/{id}/update                          |      | App\Http\Controllers\AddressController@update            | web          |
+|        | POST     | api/v1/courts/store                                 |      | App\Http\Controllers\CourtController@store               | web          |
+|        | GET|HEAD | api/v1/courts/{id?}                                 |      | App\Http\Controllers\CourtController@index               | web          |
+|        | POST     | api/v1/courts/{id}/delete                           |      | App\Http\Controllers\CourtController@destroy             | web          |
+|        | GET|HEAD | api/v1/courts/{id}/menu                             |      | App\Http\Controllers\CourtController@getCourtMenu        | web          |
+|        | GET|HEAD | api/v1/courts/{id}/stalls                           |      | App\Http\Controllers\CourtController@getCourtStalls      | web          |
+|        | POST     | api/v1/courts/{id}/update                           |      | App\Http\Controllers\CourtController@update              | web          |
+|        | POST     | api/v1/foodcats/store                               |      | App\Http\Controllers\FoodCatController@store             | web          |
+|        | GET|HEAD | api/v1/foodcats/{id?}                               |      | App\Http\Controllers\FoodCatController@index             | web          |
+|        | POST     | api/v1/foodcats/{id}/delete                         |      | App\Http\Controllers\FoodCatController@destroy           | web          |
+|        | POST     | api/v1/foodcats/{id}/update                         |      | App\Http\Controllers\FoodCatController@update            | web          |
+|        | POST     | api/v1/orders/store                                 |      | App\Http\Controllers\OrderController@store               | web          |
+|        | GET|HEAD | api/v1/orders/{code}                                |      | App\Http\Controllers\OrderController@Order               | web          |
+|        | POST     | api/v1/orders/{comp_order_id}/pay                   |      | App\Http\Controllers\OrderController@OrderPaymentMade    | web          |
+|        | POST     | api/v1/stalls/store                                 |      | App\Http\Controllers\StallController@store               | web          |
+|        | GET|HEAD | api/v1/stalls/{id?}                                 |      | App\Http\Controllers\StallController@index               | web          |
+|        | POST     | api/v1/stalls/{id}/menu/add                         |      | App\Http\Controllers\StallController@addStallMenuItem    | web          |
+|        | GET|HEAD | api/v1/stalls/{id}/menu/{menuitem_id?}              |      | App\Http\Controllers\StallController@getStallMenu        | web          |
+|        | POST     | api/v1/stalls/{id}/menu/{menuitem_id}/delete        |      | App\Http\Controllers\StallController@deleteStallMenuItem | web          |
+|        | POST     | api/v1/stalls/{id}/menu/{menuitem_id}/update        |      | App\Http\Controllers\StallController@updateStallMenuItem | web          |
+|        | GET|HEAD | api/v1/stalls/{id}/orders                           |      | App\Http\Controllers\OrderController@stallorders         | web          |
+|        | GET|HEAD | api/v1/stalls/{id}/orders/history                   |      | App\Http\Controllers\StallController@getOrderHistory     | web          |
+|        | POST     | api/v1/stalls/{id}/orders/{comp_order_id}/delivered |      | App\Http\Controllers\OrderController@OrderDelivered      | web          |
+|        | POST     | api/v1/stalls/{id}/update                           |      | App\Http\Controllers\StallController@update              | web          |
+|        | POST     | api/v1/vendors/store                                |      | App\Http\Controllers\VendorController@store              | web          |
+|        | GET|HEAD | api/v1/vendors/{id?}                                |      | App\Http\Controllers\VendorController@index              | web          |
+|        | POST     | api/v1/vendors/{id}/delete                          |      | App\Http\Controllers\VendorController@destroy            | web          |
+|        | POST     | api/v1/vendors/{id}/update                          |      | App\Http\Controllers\VendorController@update             | web          |
+|        | POST     | api/v1/venues/store                                 |      | App\Http\Controllers\VenueController@store               | web          |
+|        | GET|HEAD | api/v1/venues/{id?}                                 |      | App\Http\Controllers\VenueController@index               | web          |
+|        | GET|HEAD | api/v1/venues/{id}/courts                           |      | App\Http\Controllers\VenueController@getVenueCourts      | web          |
+|        | POST     | api/v1/venues/{id}/delete                           |      | App\Http\Controllers\VenueController@destroy             | web          |
+|        | POST     | api/v1/venues/{id}/update                           |      | App\Http\Controllers\VenueController@update              | web          |
++--------+----------+-----------------------------------------------------+------+----------------------------------------------------------+--------------+
